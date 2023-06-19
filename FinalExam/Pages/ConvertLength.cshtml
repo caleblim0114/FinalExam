@@ -1,0 +1,42 @@
+﻿@page
+@model FinalExam.Pages.ConvertLengthModel
+@{
+}
+
+<head>
+
+</head>
+
+<body>
+    <form method="post" id="myForm">
+        <table>
+            <tr>
+                <td>Mode: </td>
+                <td>
+                    <select name="CovertType">
+                        <option value="1">Meter to Feet</option>
+                        <option value="2">Feet to Meter</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Input: </td>
+                <td>
+                    <input type="number" name="InputLength" value="@(Model.InputLength)"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Output: </td>
+                <td>
+                    <input type="number" name="OutputLength" value="@(Model.OutputLength)" disabled />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Convert" style="height: 35px; width: 75px">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>

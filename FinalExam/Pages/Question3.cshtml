@@ -1,0 +1,37 @@
+﻿@page
+@model FinalExam.Pages.Question3Model
+@{
+}
+
+<head>
+    
+</head>
+<body>
+    <h1>Question 3</h1>
+    <br />
+    <p id="demo" onclick="supriseMe()">Click on this text</p>
+    <br />
+    <p>Question b)</p>
+    <p>Click the button below</p>
+    <p>10 + 5 = ?</p>
+    <button id="demo1" onclick="addMe()" style="height: 50px; width: 100px">Click me!</button>
+    <br />
+    <br />
+    <p><a href="/Question4">Let's go for Question 4</a>.</p>
+
+    @section Scripts{
+        <script>
+            function supriseMe(){
+                alert("Hello world!");
+                document.getElementById("demo").innerHTML = "Hello World!";
+            }
+
+            function addMe(){
+                let x = 10;
+                let y = 5;
+                let z = x + y;
+                document.getElementById("demo1").innerHTML = z;
+            }
+        </script>
+    }
+</body>

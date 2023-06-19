@@ -1,0 +1,78 @@
+﻿@page
+@model FinalExam.Pages.signupModel
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<head>
+    @*Internal style sheet*@
+    <style>
+        .my-border{
+            border-style: solid;
+            border-color: black;
+            border-width: 1px;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+
+        .my-row{
+            height: 50px;
+        }
+    </style>
+
+    @*External style sheet*@
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <table>
+        <tr class="my-row">
+            <td class="my-border">Name:</td>
+            <td class="my-border"><input type="text" name="name" /></td>
+        </tr>
+        <tr class="my-row">
+            <td class="my-border">Email:</td>
+            <td class="my-border"><input type="text" name="Email" /></td>
+        </tr>
+        <tr class="my-row">
+            <td class="my-border">Phone number:</td>
+            <td class="my-border"><input type="text" name="tel" /></td>
+        </tr>
+        <tr class="my-row">
+            <td class="my-border">Nationality:</td>
+            <td class="my-border">
+                <select name="naitonality">
+                    <option value="brunei">Brunei</option>
+                    <option value="malaysia">Malaysia</option>
+                    <option value="myanmar">Myanmar</option>
+                    <option value="singapore">Singapore</option>
+                    <option value="thailand">Thailand</option>
+                </select>
+            </td>
+        </tr>
+        <tr class="my-row">
+            <td class="my-border">Username:</td>
+            <td class="my-border"><input type="text" name="username" /></td>
+        </tr>
+        <tr class="my-row">
+            <td class="my-border">Password:</td>
+            <td class="my-border"><input type="text" name="password" /></td>
+        </tr>
+        <tr class="my-row">
+            <td class="my-border">Address:</td>
+            <td class="my-border"><textarea name="address"></textarea></td>
+        </tr>
+        <tr class="my-row">
+            <td class="my-border">Gender:</td>
+            <td class="my-border">
+                <input type="radio" name="gender" value="1">male
+                <input type="radio" name="gender" value="2">female
+                <br>
+            </td>
+        </tr>
+        <tr class="my-row">
+            <td class="my-border">Submit:</td>
+            <td class="my-border"><input type="submit" name="signupbtn" value="signup" /></td>
+        </tr>
+    </table>
+    <p><a href="/Question2">Let's go for Question 2</a>.</p>
+</body>

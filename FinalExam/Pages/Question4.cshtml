@@ -1,0 +1,70 @@
+﻿@page
+@model FinalExam.Pages.Question4Model
+@{
+}
+<head>
+
+</head>
+<body>
+    <p>Question 4a)</p>
+    <input id="myInput" type="text" value="Apple" />
+    <button onclick="checkPrice()">Check Price</button>
+    <p id="demo"></p>
+    <br />
+    <br />
+    <p>Question 4b)</p>
+    <ul>
+        <p id="demo1"></p>
+    </ul>
+    <br />
+    <p><a href="/ConvertLength">Let's go for Question 5</a>.</p>
+
+    @section Scripts{
+        <script>
+            function checkPrice(){
+                var price;
+                var fruit = document.getElementById("myInput").value;
+                if (fruit == "Apple"){
+                    fruit = 1;
+                } else if (fruit == "Banana"){
+                    fruit = 2;
+                } else if (fruit == "Mango") {
+                    fruit = 3;
+                } else if (fruit == "Orange") {
+                    fruit = 4;
+                } else {
+                    fruit = 5;
+                }
+
+                if (fruit>=1 && fruit<=4){
+                    switch (fruit) {
+                        case 1:
+                            price = "6.00";
+                            break;
+                        case 2:
+                            price = "3.00";
+                            break;
+                        case 3:
+                            price = "4.00";
+                            break;
+                        case 4:
+                            price = "7.00";
+                            break;
+                    }
+                    document.getElementById("demo").innerHTML = "RM" + price + "/kg";
+                }else{
+                    document.getElementById("demo").innerHTML = "Unknown: Invalid Item";
+                }
+            }
+
+            const cars = ["BMW", "Volvo", "Mercedes", "Proton", "Honda"];
+
+            let text = "";
+            for (let i = 0; i < cars.length; i++) {
+                text += "<li>" + cars[i] + "</li>" + "<br>";
+            }
+
+            document.getElementById("demo1").innerHTML = text;
+        </script>
+    }
+</body>

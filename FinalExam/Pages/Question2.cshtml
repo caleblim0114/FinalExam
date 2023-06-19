@@ -1,0 +1,58 @@
+﻿@page
+@model FinalExam.Pages.Question2Model
+@{
+}
+
+<head>
+    <style>
+        .my-div{
+            background-color: white;
+            width: 300px;
+            border: 1px solid black;
+            padding: 25px;
+            position: relative;
+            text-align: right;
+        }
+
+        .my-border {
+            border-style: solid;
+            border-color: black;
+            border-width: 1px;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="my-div">This year's Olymic is held in Brazil.</div>
+    <br />
+    <br />
+    <form method="post" id="myForm">
+        <p>Name: <input type="text" placeholder="name" asp-for="@(Model.NewStudentMark.Name)" /></p>
+        <p>Marks: <input type="text" placeholder="marks" asp-for="@(Model.NewStudentMark.Marks)" /></p>
+        <input type="submit" value="Submit" />
+    </form>
+    <br />
+    <p><a href="/Question3">Let's go for Question 3</a>.</p>
+    <br />
+    <br />
+    <table>
+        <tr>
+            <th class="my-border">No.</th>
+            <th class="my-border">Name</th>
+            <th class="my-border">Marks</th>
+            <th class="my-border">Grade</th>
+        </tr>
+
+        @foreach (var student in Model.Students)
+        {
+            <tr>
+                <td class="my-border">@(student.Id)</td>
+                <td class="my-border">@(student.Name)</td>
+                <td class="my-border">@(student.Marks)</td>
+                <td class="my-border">@(student.StudentGrade)</td>
+            </tr>
+        }
+    </table>
+</body>
